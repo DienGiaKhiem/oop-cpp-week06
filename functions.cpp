@@ -1,13 +1,22 @@
 #include <iostream>
+#include <string>
 using namespace std;
-void showWelcome(){
-    cout << "==============================" << endl;
-    cout <<" Welcome to the student manager" << endl;
-    cout << "==============================" << endl;
+void showScore(string name, double score){
+    cout << "Student: " << name << endl;
+    cout << "Score: " << score << endl;
 }
 
 int main(){
-    showWelcome();
-    cout << "Let's get started!" << endl;
-    return 0;   
+    string studentName;
+    double studentScore;
+
+    cout << "Enter student name: ";
+    getline(cin, studentName);
+
+    cout << "Enter student score: ";
+    cin >> studentScore;
+
+    showScore(studentName, studentScore);
+
+    return 0;
 }
